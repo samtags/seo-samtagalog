@@ -27,3 +27,7 @@ Interested in working together? Shoot me an email if you'd like to chat.
 - [Accounting System](https://staging-elite-accounting.vercel.app/)
 - [PasaHero](https://play.google.com/store/apps/details?id=com.pasahero.passenger&hl=en)
 - [TicketsPH](https://ticketsph.net)
+
+<!-- Testing Page Insight -->
+
+![PageSpeed Insights](https://pagespeed.web.dev/analysis/https-samtagalog-info/x6tidew1wn?form_factor=mobile)
