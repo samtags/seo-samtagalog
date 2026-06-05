@@ -1,0 +1,2 @@
+# Avoid duplicate content: /index.html and / serve the same page
+/index.html / 301

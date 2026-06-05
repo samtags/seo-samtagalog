@@ -3,8 +3,120 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sam Tagalog</title>
-    <meta name="description" content="Software Engineer | Mobile Developer" />
+    <title>Sam Tagalog | Software Engineer &amp; Mobile Developer</title>
+    <meta
+      name="description"
+      content="Sam Tagalog is a software engineer and mobile developer specializing in React Native, Expo, and scalable app architecture. Explore projects, skills, and ways to connect."
+    />
+    <meta
+      name="keywords"
+      content="Sam Tagalog, sam tagalog, Sam Tagalog developer, Sam Tagalog software engineer, Sam Tagalog mobile developer, sam tagalog portfolio, sam tagalog github, sam tagalog linkedin, mobile app developer, React Native developer, software engineer"
+    />
+    <meta name="author" content="Sam Tagalog" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="googlebot" content="index, follow" />
+    <link rel="canonical" href="https://samtagalog.info/" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://samtagalog.info/" />
+    <meta property="og:site_name" content="Sam Tagalog" />
+    <meta property="og:locale" content="en_US" />
+    <meta
+      property="og:title"
+      content="Sam Tagalog | Software Engineer &amp; Mobile Developer"
+    />
+    <meta
+      property="og:description"
+      content="Sam Tagalog is a software engineer and mobile developer specializing in React Native, Expo, and scalable app architecture. Explore projects, skills, and ways to connect."
+    />
+    <meta
+      property="og:image"
+      content="https://samtagalog.info/assets/sam-tagalog-mobile-developer-banner-1200w.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="360" />
+    <meta
+      property="og:image:alt"
+      content="Sam Tagalog, Mobile Developer — banner with code on a dark tech background"
+    />
+    <meta property="profile:first_name" content="Sam" />
+    <meta property="profile:last_name" content="Tagalog" />
+    <meta property="profile:username" content="samtagalog" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@samtagss" />
+    <meta name="twitter:creator" content="@samtagss" />
+    <meta
+      name="twitter:title"
+      content="Sam Tagalog | Software Engineer &amp; Mobile Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Sam Tagalog is a software engineer and mobile developer specializing in React Native, Expo, and scalable app architecture. Explore projects, skills, and ways to connect."
+    />
+    <meta
+      name="twitter:image"
+      content="https://samtagalog.info/assets/sam-tagalog-mobile-developer-banner-1200w.jpg"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Sam Tagalog, Mobile Developer — portfolio banner with Python code on a dark tech background"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://samtagalog.info/#website",
+            "url": "https://samtagalog.info/",
+            "name": "Sam Tagalog",
+            "description": "Official portfolio of Sam Tagalog — software engineer and mobile developer.",
+            "publisher": { "@id": "https://samtagalog.info/#person" },
+            "inLanguage": "en"
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://samtagalog.info/#profilepage",
+            "url": "https://samtagalog.info/",
+            "name": "Sam Tagalog",
+            "description": "Sam Tagalog is a software engineer specializing in mobile app development.",
+            "mainEntity": { "@id": "https://samtagalog.info/#person" },
+            "isPartOf": { "@id": "https://samtagalog.info/#website" }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://samtagalog.info/#person",
+            "name": "Sam Tagalog",
+            "givenName": "Sam",
+            "familyName": "Tagalog",
+            "url": "https://samtagalog.info/",
+            "image": "https://samtagalog.info/assets/sam-tagalog.jpg",
+            "jobTitle": "Software Engineer",
+            "description": "Software engineer specializing in mobile app development. Builds practical, user-focused applications with React Native, Expo, and scalable architecture.",
+            "email": "mailto:mail.samtags@gmail.com",
+            "sameAs": [
+              "https://github.com/samtags",
+              "https://www.linkedin.com/in/samtagalog/",
+              "https://www.facebook.com/sam.tagss",
+              "https://www.instagram.com/sam.tagss",
+              "https://www.threads.com/@sam.tagss",
+              "https://x.com/samtagss"
+            ],
+            "knowsAbout": [
+              "Mobile App Development",
+              "React Native",
+              "Expo",
+              "TypeScript",
+              "JavaScript",
+              "Node.js",
+              "Software Engineering"
+            ]
+          }
+        ]
+      }
+    </script>
 
     <link
       rel="preload"
@@ -315,6 +427,20 @@
         color: #808080;
       }
 
+      .site-banner {
+        width: 100%;
+        border-radius: 4px;
+        overflow: hidden;
+        background-color: #f3f4f6;
+      }
+
+      .site-banner picture,
+      .site-banner img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
       .layout {
         display: flex;
         flex-direction: column;
@@ -382,6 +508,33 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="min-h-screen p-5 md:p-8">
+    <header class="site-banner mb-8">
+      <picture>
+        <source
+          type="image/webp"
+          srcset="
+            ./assets/sam-tagalog-mobile-developer-banner-768w.webp   768w,
+            ./assets/sam-tagalog-mobile-developer-banner-1200w.webp 1200w,
+            ./assets/sam-tagalog-mobile-developer-banner-1920w.webp 1920w
+          "
+          sizes="100vw"
+        />
+        <img
+          src="./assets/sam-tagalog-mobile-developer-banner-1200w.jpg"
+          srcset="
+            ./assets/sam-tagalog-mobile-developer-banner-768w.jpg   768w,
+            ./assets/sam-tagalog-mobile-developer-banner-1200w.jpg 1200w,
+            ./assets/sam-tagalog-mobile-developer-banner-1920w.jpg 1920w
+          "
+          sizes="100vw"
+          alt="Sam Tagalog, Mobile Developer — portfolio banner with Python code on a dark tech background"
+          width="1200"
+          height="360"
+          decoding="async"
+          class="img-fade"
+        />
+      </picture>
+    </header>
     <div class="layout">
       <div class="sidebar scrollbar-hide gap-8">
         <div class="sidebar-content">
