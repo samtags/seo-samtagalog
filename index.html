@@ -121,12 +121,6 @@
     <link
       rel="preload"
       as="image"
-      href="./assets/sam-tagalog-64w.webp"
-      type="image/webp"
-    />
-    <link
-      rel="preload"
-      as="image"
       href="./assets/elite-thumbnail-400w.webp"
       type="image/webp"
       media="(max-width: 767px)"
@@ -147,6 +141,18 @@
 
       html {
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        padding: 1.25rem;
+      }
+
+      @media (min-width: 768px) {
+        body {
+          padding: 2rem;
+        }
       }
 
       h1,
@@ -427,20 +433,6 @@
         color: #808080;
       }
 
-      .site-banner {
-        width: 100%;
-        border-radius: 4px;
-        overflow: hidden;
-        background-color: #f3f4f6;
-      }
-
-      .site-banner picture,
-      .site-banner img {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-
       .layout {
         display: flex;
         flex-direction: column;
@@ -458,6 +450,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        gap: 2rem;
         width: 100%;
         flex-shrink: 0;
         align-self: flex-start;
@@ -469,6 +462,40 @@
         gap: 2rem;
         width: 100%;
         flex-shrink: 0;
+      }
+
+      .profile-photo {
+        width: 64px;
+        height: 64px;
+        border-radius: 9999px;
+        overflow: hidden;
+        background-color: #e5e7eb;
+      }
+
+      .profile-photo picture {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .profile-photo-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .profile-copy {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .project-card-media {
+        transition: transform 1s ease-out;
+      }
+
+      .project-card:hover .project-card-media {
+        transform: scale(1.05);
       }
 
       @media (min-width: 768px) {
@@ -500,48 +527,13 @@
         }
       }
     </style>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body class="min-h-screen p-5 md:p-8">
-    <header class="site-banner mb-8 hidden">
-      <picture>
-        <source
-          type="image/webp"
-          srcset="
-            ./assets/sam-tagalog-mobile-developer-banner-768w.webp   768w,
-            ./assets/sam-tagalog-mobile-developer-banner-1200w.webp 1200w,
-            ./assets/sam-tagalog-mobile-developer-banner-1920w.webp 1920w
-          "
-          sizes="100vw"
-        />
-        <img
-          src="./assets/sam-tagalog-mobile-developer-banner-1200w.jpg"
-          srcset="
-            ./assets/sam-tagalog-mobile-developer-banner-768w.jpg   768w,
-            ./assets/sam-tagalog-mobile-developer-banner-1200w.jpg 1200w,
-            ./assets/sam-tagalog-mobile-developer-banner-1920w.jpg 1920w
-          "
-          sizes="100vw"
-          alt="Sam Tagalog, Mobile Developer — portfolio banner with Python code on a dark tech background"
-          width="1200"
-          height="360"
-          decoding="async"
-          class="img-fade"
-        />
-      </picture>
-    </header>
+  <body>
     <div class="layout">
-      <div class="sidebar scrollbar-hide gap-8">
+      <div class="sidebar scrollbar-hide">
         <div class="sidebar-content">
-          <div
-            class="w-[64px] h-[64px] bg-gray-200 rounded-full overflow-hidden"
-          >
-            <picture class="block w-full h-full">
+          <div class="profile-photo">
+            <picture>
               <source
                 type="image/webp"
                 srcset="
@@ -562,11 +554,11 @@
                 height="64"
                 fetchpriority="high"
                 decoding="async"
-                class="img-fade w-full h-full object-cover"
+                class="img-fade profile-photo-image"
               />
             </picture>
           </div>
-          <div class="flex flex-col gap-3">
+          <div class="profile-copy">
             <h1>Sam Tagalog</h1>
             <p>
               I'm a software engineer specializing in mobile app development. I
@@ -584,7 +576,7 @@
               aria-label="GitHub"
             >
               <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                src="./assets/icons/github.svg"
                 alt=""
                 width="16"
                 height="16"
@@ -599,7 +591,7 @@
               aria-label="LinkedIn"
             >
               <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg"
+                src="./assets/icons/linkedin.svg"
                 alt=""
                 width="16"
                 height="16"
@@ -614,7 +606,7 @@
               aria-label="Facebook"
             >
               <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/facebook/facebook-original.svg"
+                src="./assets/icons/facebook.svg"
                 alt=""
                 width="16"
                 height="16"
@@ -629,7 +621,7 @@
               aria-label="Instagram"
             >
               <img
-                src="https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/instagram.svg"
+                src="./assets/icons/instagram.svg"
                 alt=""
                 width="16"
                 height="16"
@@ -644,7 +636,7 @@
               aria-label="Threads"
             >
               <img
-                src="https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/threads.svg"
+                src="./assets/icons/threads.svg"
                 alt=""
                 width="16"
                 height="16"
@@ -659,7 +651,7 @@
               aria-label="X"
             >
               <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg"
+                src="./assets/icons/twitter.svg"
                 alt=""
                 width="16"
                 height="16"
@@ -687,52 +679,84 @@
           <ul class="logo-strip-track">
             <li>
               <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                src="./assets/icons/typescript.svg"
                 alt="TypeScript"
+                width="32"
+                height="32"
+                loading="lazy"
+                decoding="async"
               />
             </li>
             <li>
               <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                src="./assets/icons/javascript.svg"
                 alt="JavaScript"
+                width="32"
+                height="32"
+                loading="lazy"
+                decoding="async"
               />
             </li>
             <li>
               <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+                src="./assets/icons/nodejs.svg"
                 alt="Node.js"
+                width="32"
+                height="32"
+                loading="lazy"
+                decoding="async"
               />
             </li>
             <li>
               <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/expo/expo-original.svg"
+                src="./assets/icons/expo.svg"
                 alt="Expo"
+                width="32"
+                height="32"
+                loading="lazy"
+                decoding="async"
               />
             </li>
             <li>
               <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactnative/reactnative-original.svg"
+                src="./assets/icons/reactnative.svg"
                 alt="React Native"
+                width="32"
+                height="32"
+                loading="lazy"
+                decoding="async"
               />
             </li>
 
             <li>
               <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/datadog/datadog-original.svg"
+                src="./assets/icons/datadog.svg"
                 alt="Datadog"
+                width="32"
+                height="32"
+                loading="lazy"
+                decoding="async"
               />
             </li>
 
             <li>
               <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudrun/cloudrun-original.svg"
+                src="./assets/icons/cloudrun.svg"
                 alt="Cloud Run"
+                width="32"
+                height="32"
+                loading="lazy"
+                decoding="async"
               />
             </li>
             <li>
               <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg"
+                src="./assets/icons/go.svg"
                 alt="Go"
+                width="32"
+                height="32"
+                loading="lazy"
+                decoding="async"
               />
             </li>
           </ul>
@@ -773,7 +797,7 @@
                     fetchpriority="high"
                     loading="eager"
                     decoding="async"
-                    class="img-fade transition-transform duration-1000 ease-out hover:scale-105"
+                    class="img-fade project-card-media"
                   />
                 </picture>
               </div>
@@ -816,10 +840,9 @@
                     alt="Pasahero"
                     width="1200"
                     height="800"
-                    fetchpriority="high"
-                    loading="eager"
+                    loading="lazy"
                     decoding="async"
-                    class="img-fade transition-transform duration-1000 ease-out hover:scale-105"
+                    class="img-fade project-card-media"
                   />
                 </picture>
               </div>
@@ -864,7 +887,7 @@
                     height="800"
                     loading="lazy"
                     decoding="async"
-                    class="img-fade transition-transform duration-1000 ease-out hover:scale-105"
+                    class="img-fade project-card-media"
                   />
                 </picture>
               </div>
