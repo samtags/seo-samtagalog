@@ -1,0 +1,744 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sam Tagalog</title>
+    <meta name="description" content="Software Engineer | Mobile Developer" />
+
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/sam-tagalog-64w.webp"
+      type="image/webp"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/elite-thumbnail-400w.webp"
+      type="image/webp"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/elite-thumbnail-768w.webp"
+      type="image/webp"
+      media="(min-width: 768px)"
+    />
+
+    <style>
+      :root {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      html {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      figure {
+        margin: 0;
+      }
+
+      /* Framer preset lg4g6o (heading) */
+      h1 {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 32px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 1.2em;
+        letter-spacing: 0;
+      }
+
+      /* Framer preset bbn56r (body) */
+      p {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 1.6em;
+        letter-spacing: 0;
+        color: #666666;
+        font-feature-settings:
+          "blwf" on,
+          "cv09" on,
+          "cv03" on,
+          "cv04" on,
+          "cv11" on;
+      }
+
+      .social-icons {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .socials {
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        border: 1px solid #ebebeb;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #000;
+      }
+
+      .socials img {
+        width: 16px;
+        height: 16px;
+        filter: grayscale(100%);
+        opacity: 0.3;
+      }
+
+      .cta {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 24px;
+        width: 100%;
+        height: min-content;
+        padding: 32px 0;
+      }
+
+      .cta::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-top: 1px solid #f0f0f0;
+        border-bottom: 1px solid #f0f0f0;
+        pointer-events: none;
+        box-sizing: border-box;
+      }
+
+      .cta-text {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        flex: 1 0 0;
+        min-width: 260px;
+      }
+
+      .cta-heading {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.6em;
+        color: #000;
+      }
+
+      .cta-subtext {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.6em;
+        color: #808080;
+      }
+
+      .cta-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex: none;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.6286em 1.1429em;
+        border-radius: 100px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.6em;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .btn-secondary {
+        background-color: #f2f2f2;
+        color: #000;
+      }
+
+      .btn-primary {
+        background-color: #000;
+        color: #fff;
+      }
+
+      .logo-strip {
+        width: 100%;
+        height: 36px;
+        opacity: 0.75;
+        position: relative;
+        overflow: hidden;
+        flex: none;
+        filter: grayscale(100%);
+        -webkit-mask-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0) 0%,
+          rgb(0, 0, 0) 12.5%,
+          rgb(0, 0, 0) 87.5%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        mask-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0) 0%,
+          rgb(0, 0, 0) 12.5%,
+          rgb(0, 0, 0) 87.5%,
+          rgba(0, 0, 0, 0) 100%
+        );
+      }
+
+      .logo-strip-track {
+        display: flex;
+        align-items: center;
+        gap: 64px;
+        width: max-content;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .logo-strip-track li {
+        margin: 0;
+        padding: 0;
+        flex-shrink: 0;
+      }
+
+      .logo-strip-track img {
+        height: 32px;
+        width: auto;
+        flex-shrink: 0;
+        object-fit: contain;
+        display: block;
+      }
+
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      .projects {
+        width: 100%;
+        height: min-content;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+      }
+
+      .project-card-shell {
+        width: 100%;
+        max-width: 1200px;
+        aspect-ratio: 1.48148;
+        position: relative;
+      }
+
+      .project-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .project-card-image {
+        flex: 1 1 0;
+        width: 100%;
+        min-height: 0;
+        height: 1px;
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+        background-color: #f3f4f6;
+      }
+
+      .img-fade {
+        opacity: 0;
+        transition: opacity 0.35s ease;
+      }
+
+      .img-fade.is-loaded {
+        opacity: 1;
+      }
+
+      .project-card-image picture {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .project-card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+
+      .project-card-caption {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        flex: none;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.6em;
+      }
+
+      .project-card-title {
+        color: #000;
+      }
+
+      .project-card-meta {
+        color: #808080;
+      }
+
+      .layout {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: flex-start;
+      }
+
+      @media (min-width: 768px) {
+        .layout {
+          flex-direction: row;
+        }
+      }
+
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        flex-shrink: 0;
+        align-self: flex-start;
+      }
+
+      .sidebar-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+        flex-shrink: 0;
+      }
+
+      @media (min-width: 768px) {
+        .sidebar {
+          position: sticky;
+          top: 2rem;
+          height: calc(100vh - 4rem);
+          overflow-y: auto;
+          overscroll-behavior: contain;
+          max-width: 336px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .sidebar {
+          max-width: 496px;
+        }
+      }
+
+      .projects-panel {
+        flex: 1;
+        min-width: 0;
+        width: 100%;
+      }
+
+      @media (min-width: 768px) {
+        .projects-panel {
+          padding: 0 2rem 2rem 0;
+        }
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="min-h-screen p-5 md:p-8">
+    <div class="layout">
+      <div class="sidebar scrollbar-hide gap-8">
+        <div class="sidebar-content">
+          <div
+            class="w-[64px] h-[64px] bg-gray-200 rounded-full overflow-hidden"
+          >
+            <picture class="block w-full h-full">
+              <source
+                type="image/webp"
+                srcset="
+                  ./assets/sam-tagalog-64w.webp   64w,
+                  ./assets/sam-tagalog-128w.webp 128w
+                "
+                sizes="64px"
+              />
+              <img
+                src="./assets/sam-tagalog-128w.jpg"
+                srcset="
+                  ./assets/sam-tagalog-64w.jpg   64w,
+                  ./assets/sam-tagalog-128w.jpg 128w
+                "
+                sizes="64px"
+                alt="Sam Tagalog"
+                width="64"
+                height="64"
+                fetchpriority="high"
+                decoding="async"
+                class="img-fade w-full h-full object-cover"
+              />
+            </picture>
+          </div>
+          <div class="flex flex-col gap-3">
+            <h1>Sam Tagalog</h1>
+            <p>
+              I'm a software engineer specializing in mobile app development. I
+              build practical, user-focused applications with clean interfaces,
+              reliable performance, and scalable architecture, turning ideas
+              into polished digital products that people can use every day.
+            </p>
+          </div>
+          <div class="social-icons">
+            <a
+              class="socials"
+              href="https://github.com/samtags"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                alt=""
+                width="16"
+                height="16"
+                aria-hidden="true"
+              />
+            </a>
+            <a
+              class="socials"
+              href="https://www.linkedin.com/in/samtagalog/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg"
+                alt=""
+                width="16"
+                height="16"
+                aria-hidden="true"
+              />
+            </a>
+            <a
+              class="socials"
+              href="https://www.facebook.com/sam.tagss"
+              target="_blank"
+              rel="noopener"
+              aria-label="Facebook"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/facebook/facebook-original.svg"
+                alt=""
+                width="16"
+                height="16"
+                aria-hidden="true"
+              />
+            </a>
+            <a
+              class="socials"
+              href="https://www.instagram.com/sam.tagss"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/instagram.svg"
+                alt=""
+                width="16"
+                height="16"
+                aria-hidden="true"
+              />
+            </a>
+            <a
+              class="socials"
+              href="https://www.threads.com/@sam.tagss"
+              target="_blank"
+              rel="noopener"
+              aria-label="Threads"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/threads.svg"
+                alt=""
+                width="16"
+                height="16"
+                aria-hidden="true"
+              />
+            </a>
+            <a
+              class="socials"
+              href="https://x.com/samtagss"
+              target="_blank"
+              rel="noopener"
+              aria-label="X"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg"
+                alt=""
+                width="16"
+                height="16"
+                aria-hidden="true"
+              />
+            </a>
+          </div>
+          <div class="cta">
+            <div class="cta-text">
+              <p class="cta-heading">Interested in working together?</p>
+              <p class="cta-subtext">
+                Shoot me an email if you'd like to chat.
+              </p>
+            </div>
+            <div class="cta-actions">
+              <!-- <a class="btn btn-secondary" href="./about">About Me</a> -->
+              <a class="btn btn-primary" href="mailto:mail.samtags@gmail.com"
+                >Email</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="logo-strip">
+          <ul class="logo-strip-track">
+            <li>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                alt="TypeScript"
+              />
+            </li>
+            <li>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                alt="JavaScript"
+              />
+            </li>
+            <li>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+                alt="Node.js"
+              />
+            </li>
+            <li>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/expo/expo-original.svg"
+                alt="Expo"
+              />
+            </li>
+            <li>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactnative/reactnative-original.svg"
+                alt="React Native"
+              />
+            </li>
+
+            <li>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/datadog/datadog-original.svg"
+                alt="Datadog"
+              />
+            </li>
+
+            <li>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudrun/cloudrun-original.svg"
+                alt="Cloud Run"
+              />
+            </li>
+            <li>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg"
+                alt="Go"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="projects-panel scrollbar-hide">
+        <div class="projects">
+          <div class="project-card-shell">
+            <a
+              class="project-card"
+              target="_blank"
+              rel="noopener"
+              href="https://staging-elite-accounting.vercel.app/"
+            >
+              <div class="project-card-image">
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./assets/elite-thumbnail-400w.webp   400w,
+                      ./assets/elite-thumbnail-768w.webp   768w,
+                      ./assets/elite-thumbnail-1200w.webp 1200w
+                    "
+                    sizes="(min-width: 1024px) min(1200px, calc(100vw - 624px)), (min-width: 768px) min(1200px, calc(100vw - 464px)), calc(100vw - 40px)"
+                  />
+                  <img
+                    src="./assets/elite-thumbnail-768w.jpg"
+                    srcset="
+                      ./assets/elite-thumbnail-400w.jpg   400w,
+                      ./assets/elite-thumbnail-768w.jpg   768w,
+                      ./assets/elite-thumbnail-1200w.jpg 1200w
+                    "
+                    sizes="(min-width: 1024px) min(1200px, calc(100vw - 624px)), (min-width: 768px) min(1200px, calc(100vw - 464px)), calc(100vw - 40px)"
+                    alt="Accounting System"
+                    width="1200"
+                    height="800"
+                    fetchpriority="high"
+                    loading="eager"
+                    decoding="async"
+                    class="img-fade transition-transform duration-1000 ease-out hover:scale-105"
+                  />
+                </picture>
+              </div>
+              <div class="project-card-caption">
+                <span class="project-card-title">Accounting System</span>
+                <span class="project-card-meta">·</span>
+                <span class="project-card-meta">Next.JS</span>
+                <span class="project-card-meta">·</span>
+                <span class="project-card-meta">PostgreSQL</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="project-card-shell">
+            <a
+              class="project-card"
+              target="_blank"
+              rel="noopener"
+              href="https://play.google.com/store/apps/details?id=com.pasahero.passenger&hl=en"
+            >
+              <div class="project-card-image">
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./assets/pasahero-thumbnail-400w.webp   400w,
+                      ./assets/pasahero-thumbnail-768w.webp   768w,
+                      ./assets/pasahero-thumbnail-1200w.webp 1200w
+                    "
+                    sizes="(min-width: 1024px) min(1200px, calc(100vw - 624px)), (min-width: 768px) min(1200px, calc(100vw - 464px)), calc(100vw - 40px)"
+                  />
+                  <img
+                    src="./assets/pasahero-thumbnail-768w.jpg"
+                    srcset="
+                      ./assets/pasahero-thumbnail-400w.jpg   400w,
+                      ./assets/pasahero-thumbnail-768w.jpg   768w,
+                      ./assets/pasahero-thumbnail-1200w.jpg 1200w
+                    "
+                    sizes="(min-width: 1024px) min(1200px, calc(100vw - 624px)), (min-width: 768px) min(1200px, calc(100vw - 464px)), calc(100vw - 40px)"
+                    alt="Pasahero"
+                    width="1200"
+                    height="800"
+                    fetchpriority="high"
+                    loading="eager"
+                    decoding="async"
+                    class="img-fade transition-transform duration-1000 ease-out hover:scale-105"
+                  />
+                </picture>
+              </div>
+              <div class="project-card-caption">
+                <span class="project-card-title">PasaHero</span>
+                <span class="project-card-meta">·</span>
+                <span class="project-card-meta">React Native</span>
+                <span class="project-card-meta">·</span>
+                <span class="project-card-meta">Expo</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="project-card-shell">
+            <a
+              class="project-card"
+              target="_blank"
+              rel="noopener"
+              href="https://ticketsph.net"
+            >
+              <div class="project-card-image">
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./assets/ticketsph-thumbnail-400w.webp   400w,
+                      ./assets/ticketsph-thumbnail-768w.webp   768w,
+                      ./assets/ticketsph-thumbnail-1200w.webp 1200w
+                    "
+                    sizes="(min-width: 1024px) min(1200px, calc(100vw - 624px)), (min-width: 768px) min(1200px, calc(100vw - 464px)), calc(100vw - 40px)"
+                  />
+                  <img
+                    src="./assets/ticketsph-thumbnail-768w.jpg"
+                    srcset="
+                      ./assets/ticketsph-thumbnail-400w.jpg   400w,
+                      ./assets/ticketsph-thumbnail-768w.jpg   768w,
+                      ./assets/ticketsph-thumbnail-1200w.jpg 1200w
+                    "
+                    sizes="(min-width: 1024px) min(1200px, calc(100vw - 624px)), (min-width: 768px) min(1200px, calc(100vw - 464px)), calc(100vw - 40px)"
+                    alt="TicketsPH"
+                    width="1200"
+                    height="800"
+                    loading="lazy"
+                    decoding="async"
+                    class="img-fade transition-transform duration-1000 ease-out hover:scale-105"
+                  />
+                </picture>
+              </div>
+              <div class="project-card-caption">
+                <span class="project-card-title">TicketsPH</span>
+                <span class="project-card-meta">·</span>
+                <span class="project-card-meta">Web App</span>
+                <span class="project-card-meta">·</span>
+                <span class="project-card-meta">SaSS</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.querySelectorAll("img.img-fade").forEach(function (img) {
+        function markLoaded() {
+          img.classList.add("is-loaded");
+        }
+        if (img.complete && img.naturalWidth > 0) {
+          markLoaded();
+        } else {
+          img.addEventListener("load", markLoaded, { once: true });
+          img.addEventListener("error", markLoaded, { once: true });
+        }
+      });
+    </script>
+  </body>
+</html>
