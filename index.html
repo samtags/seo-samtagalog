@@ -121,14 +121,14 @@
     <link
       rel="preload"
       as="image"
-      href="./assets/elite-thumbnail-400w.webp"
+      href="./assets/dici-400w.webp"
       type="image/webp"
       media="(max-width: 767px)"
     />
     <link
       rel="preload"
       as="image"
-      href="./assets/elite-thumbnail-768w.webp"
+      href="./assets/dici-768w.webp"
       type="image/webp"
       media="(min-width: 768px)"
     />
@@ -410,6 +410,13 @@
         object-fit: cover;
         object-position: center;
         display: block;
+      }
+
+      @media (max-width: 767px) {
+        .project-card-image img.project-card-media--contain-sm {
+          object-fit: contain;
+          object-position: center;
+        }
       }
 
       .project-card-caption {
@@ -770,6 +777,52 @@
               class="project-card"
               target="_blank"
               rel="noopener"
+              href="https://dici.aptly.software/"
+            >
+              <div class="project-card-image">
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./assets/dici-400w.webp   400w,
+                      ./assets/dici-768w.webp   768w,
+                      ./assets/dici-1200w.webp 1200w
+                    "
+                    sizes="(min-width: 1024px) min(1200px, calc(100vw - 624px)), (min-width: 768px) min(1200px, calc(100vw - 464px)), calc(100vw - 40px)"
+                  />
+                  <img
+                    src="./assets/dici-768w.jpg"
+                    srcset="
+                      ./assets/dici-400w.jpg   400w,
+                      ./assets/dici-768w.jpg   768w,
+                      ./assets/dici-1200w.jpg 1200w
+                    "
+                    sizes="(min-width: 1024px) min(1200px, calc(100vw - 624px)), (min-width: 768px) min(1200px, calc(100vw - 464px)), calc(100vw - 40px)"
+                    alt="Dici"
+                    width="1200"
+                    height="800"
+                    fetchpriority="high"
+                    loading="eager"
+                    decoding="async"
+                    class="img-fade project-card-media project-card-media--contain-sm"
+                  />
+                </picture>
+              </div>
+              <div class="project-card-caption">
+                <span class="project-card-title">Dici: Devo, Pray, Church</span>
+                <span class="project-card-meta">·</span>
+                <span class="project-card-meta">Android</span>
+                <span class="project-card-meta">·</span>
+                <span class="project-card-meta">iOS</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="project-card-shell">
+            <a
+              class="project-card"
+              target="_blank"
+              rel="noopener"
               href="https://staging-elite-accounting.vercel.app/"
             >
               <div class="project-card-image">
@@ -794,8 +847,7 @@
                     alt="Accounting System"
                     width="1200"
                     height="800"
-                    fetchpriority="high"
-                    loading="eager"
+                    loading="lazy"
                     decoding="async"
                     class="img-fade project-card-media"
                   />
