@@ -121,14 +121,14 @@
     <link
       rel="preload"
       as="image"
-      href="./assets/dici-400w.webp"
+      href="./assets/wifitayo-thumbnail-400w.webp"
       type="image/webp"
       media="(max-width: 767px)"
     />
     <link
       rel="preload"
       as="image"
-      href="./assets/dici-768w.webp"
+      href="./assets/wifitayo-thumbnail-768w.webp"
       type="image/webp"
       media="(min-width: 768px)"
     />
@@ -777,6 +777,52 @@
               class="project-card"
               target="_blank"
               rel="noopener"
+              href="https://shop.wifitayo.com"
+            >
+              <div class="project-card-image">
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./assets/wifitayo-thumbnail-400w.webp   400w,
+                      ./assets/wifitayo-thumbnail-768w.webp   768w,
+                      ./assets/wifitayo-thumbnail-1200w.webp 1200w
+                    "
+                    sizes="(min-width: 1024px) min(1200px, calc(100vw - 624px)), (min-width: 768px) min(1200px, calc(100vw - 464px)), calc(100vw - 40px)"
+                  />
+                  <img
+                    src="./assets/wifitayo-thumbnail-768w.jpg"
+                    srcset="
+                      ./assets/wifitayo-thumbnail-400w.jpg   400w,
+                      ./assets/wifitayo-thumbnail-768w.jpg   768w,
+                      ./assets/wifitayo-thumbnail-1200w.jpg 1200w
+                    "
+                    sizes="(min-width: 1024px) min(1200px, calc(100vw - 624px)), (min-width: 768px) min(1200px, calc(100vw - 464px)), calc(100vw - 40px)"
+                    alt="WiFiTayo"
+                    width="1024"
+                    height="682"
+                    fetchpriority="high"
+                    loading="eager"
+                    decoding="async"
+                    class="img-fade project-card-media"
+                  />
+                </picture>
+              </div>
+              <div class="project-card-caption">
+                <span class="project-card-title">WiFiTayo</span>
+                <span class="project-card-meta">·</span>
+                <span class="project-card-meta">Ecommerce</span>
+                <span class="project-card-meta">·</span>
+                <span class="project-card-meta">Payments</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="project-card-shell">
+            <a
+              class="project-card"
+              target="_blank"
+              rel="noopener"
               href="https://dici.aptly.software/"
             >
               <div class="project-card-image">
@@ -801,8 +847,7 @@
                     alt="Dici"
                     width="1200"
                     height="800"
-                    fetchpriority="high"
-                    loading="eager"
+                    loading="lazy"
                     decoding="async"
                     class="img-fade project-card-media project-card-media--contain-sm"
                   />
